@@ -1,4 +1,4 @@
-package com.userh.exceptions;
+package com.userh.exception;
 
 public class UserNotFoundException extends RuntimeException{
 

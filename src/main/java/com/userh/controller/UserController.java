@@ -19,8 +19,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.userh.dto.UserDTO;
-import com.userh.entities.User;
-import com.userh.services.UserService;
+import com.userh.entity.User;
+import com.userh.service.UserService;
 
 @RestController
 public class UserController {

@@ -1,6 +1,6 @@
 package com.userh.dto;
 
-import com.userh.entities.User;
+import com.userh.entity.User;
 
 public class UserDTO {
 
