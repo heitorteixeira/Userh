@@ -5,7 +5,7 @@ API of system UserH with java and springboot
 
 1)Run `docker pull tutum/mongodb` to download mongodb image.
  
-2)Run `docker run -d --name mongo -p 27017:27017 -p 28017:28017 -e AUTH=no tutum/mongodb` Criate MongoDb database without password.
+2)Run `docker run -d --name mongo -p 27017:27017 -p 28017:28017 -e AUTH=no tutum/mongodb` Create MongoDb database without password.
 
 3)Run `docker start mongo` Start mongodb image.
 
