@@ -61,8 +61,4 @@ public class UserService {
 		return userRepository.findByNomeOrEmailPage(nome, email, pageRequest);
 	}
 
-	public void patch(Integer id) {
-		// TODO: path
-		
-	}
 }

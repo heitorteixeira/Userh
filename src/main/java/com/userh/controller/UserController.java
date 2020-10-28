@@ -68,13 +68,6 @@ public class UserController {
 		
 	}
 	
-	@PreAuthorize("hasAnyRole('ADMIN')")
-	@PatchMapping(value="/users/{id}")
-	public ResponseEntity<Void> patch(@RequestBody UserDTO dto, @PathVariable Integer id) {
-		userService.patch(id);
-		return ResponseEntity.noContent().build();
-	}
-	
 	@GetMapping(value="/users/page")
 	public ResponseEntity<Page<User>> findPage(
 			@RequestParam(value="nome", defaultValue="") String nome, 
