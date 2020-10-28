@@ -3,6 +3,7 @@ package com.userh.security;
 import java.util.Arrays;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
@@ -26,7 +27,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	@Autowired
 	private Environment env;
-	
+
+	@Qualifier("userDetailsServiceImpl")
 	@Autowired
 	private UserDetailsService userDetailsService;
 	
@@ -37,6 +39,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
+
 		if (Arrays.asList(env.getActiveProfiles()).contains("test")) {
 			http.cors().and().csrf().disable();
 			http.authorizeRequests()
