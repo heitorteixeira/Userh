@@ -7,6 +7,7 @@ import org.springframework.data.mongodb.repository.Query;
 
 import com.userh.entity.User;
 
+
 public interface UserRepository extends MongoRepository<User, Integer>{
 
 	@Query("{'$or':[ {'name':{ '$regex' : ?0 , $options: 'i'}}, {'email':?1} ] }")
